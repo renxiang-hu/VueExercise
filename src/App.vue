@@ -1,17 +1,18 @@
 <template>
   <h1>这是App的根组件</h1>
-  <h2>{{username}}</h2>
-  <h3 class="title">这是vue的组件</h3>
-  <button @click="addCount">{{this.count}}</button>
+  <hr>
+<!--  使用todoList组件-->
+  <TodoList.vue>fdgdgds</TodoList.vue>
 </template>
 
 <script>
+  import TodoList from "./components/todo-list/TodoList.vue"
   export default {
     name: 'MyApp',
+    components: {TodoList},
     data(){
       return{
-        username: 'hurenxiang',
-        count:0
+
       }
     },
     methods: {
@@ -27,7 +28,7 @@
     color: #f5083b;
   }
   .title{
-    color: blue;
+    color: #ffffff;
   }
 
 </style>
