@@ -1,19 +1,23 @@
 <template>
   <h1>这是App的根组件</h1>
   <hr>
-  <TodoInput @add="onAddNewTask"></TodoInput>
-  <TodoList :todoList="todoList" class="mt-2"></TodoList>
-  <todoButton :active="activeBtnIndex"></todoButton>
+<!--  Todo组件-->
+<!--  <TodoInput @add="onAddNewTask"></TodoInput>-->
+<!--  <TodoList :todoList="todoList" class="mt-2"></TodoList>-->
+<!--  <todoButton :active="activeBtnIndex"></todoButton>-->
+<!--  watch监视器用法-->
+  <MyWatch></MyWatch>
 </template>
 
 <script>
   import TodoList from "./components/todo-list/TodoList.vue"
   import TodoInput from "./components/todo-input/TodoInput.vue";
   import TodoButton from "./components/todo-button/TodoButton.vue";
+  import MyWatch from "./components/01--watch/MyWatch.vue";
 
   export default {
     name: 'MyApp',
-    components: {TodoButton, TodoInput, TodoList},
+    components: {MyWatch, TodoButton, TodoInput, TodoList},
     data(){
       return{
        activeBtnIndex:1,
